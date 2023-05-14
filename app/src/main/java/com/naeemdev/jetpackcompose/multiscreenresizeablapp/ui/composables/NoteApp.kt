@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import com.naeemdev.jetpackcompose.multiscreenresizeablapp.debugging.ReDebugger
 import com.naeemdev.jetpackcompose.multiscreenresizeablapp.ui.NotesViewModel
 import com.naeemdev.jetpackcompose.multiscreenresizeablapp.ui.theme.MultiScreenResizeablAppTheme
 import com.naeemdev.jetpackcompose.multiscreenresizeablapp.ui.util.ContentType
@@ -47,8 +48,16 @@ fun NoteApp(
       navigationType = NavigationType.BOTTOM_NAVIGATION
       contentType = ContentType.LIST_ONLY
     }
-  }
 
+  }
+  ReDebugger(
+    trackMap = mapOf(
+      "Expanded" to  WindowWidthSizeClass.Expanded,
+      "Compact" to  WindowWidthSizeClass.Compact,
+      "Medium" to  WindowWidthSizeClass.Medium,
+      "NavigationType" to navigationType.name,
+    ),
+  )
   NoteNavigationWrapperUi(
     contentType = contentType,
     navigationType = navigationType,
