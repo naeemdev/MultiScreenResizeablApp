@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Multi Screen App</string>
+    <string name="noteList">Notes</string>
+    <string name="noteDetail">noteDetail</string>
+    <string name="notebooks">Notebooks</string>
+    <string name="deleted">Deleted notes</string>
+    <string name="profile">User Profile</string>
+</resources>
